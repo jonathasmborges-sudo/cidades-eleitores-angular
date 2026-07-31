@@ -8,3 +8,21 @@
   --texto-claro: #6b7280;
   --borda: #e5e7eb;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--fundo-tela);
+  color: var(--texto-escuro);
+}
+
+#container-principal {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
