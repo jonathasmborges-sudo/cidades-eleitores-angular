@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --fundo-tela: #f3f4f6;
+  --fundo-card: #ffffff;
+  --cor-primaria: #2563eb;
+  --cor-primaria-hover: #1d4ed8;
+  --texto-escuro: #1f2937;
+  --texto-claro: #6b7280;
+  --borda: #e5e7eb;
+}
