@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Módulo essencial para formulários
+import { FormsModule } from '@angular/forms';
 
-// 1. Criamos a "regra" de como uma cidade deve ser cadastrada
+// Estrutura de dados para o cadastro de cidades
 interface CidadeEleitoral {
   nome: string;
   eleitores: number;
@@ -11,21 +11,20 @@ interface CidadeEleitoral {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Precisamos declarar os módulos aqui
+  imports: [CommonModule, FormsModule],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App {
-  // 2. Variáveis ligadas aos inputs (o que o usuário vai digitar)
+  // Propriedades vinculadas aos campos do formulário
   nomeCidade: string = '';
   quantidadeEleitores: number | null = null;
   
-  // 3. A lista (Array) que vai guardar todas as cidades cadastradas
+  // Lista para armazenamento das cidades cadastradas
   cidades: CidadeEleitoral[] = [];
 
-  // 4. Função disparada pelo botão "Cadastrar"
+  // Método para validação e inclusão de nova cidade na lista
   adicionarCidade() {
-    // Só adiciona se os dois campos estiverem preenchidos
     if (this.nomeCidade && this.quantidadeEleitores !== null) {
       
       this.cidades.push({
@@ -33,7 +32,7 @@ export class App {
         eleitores: this.quantidadeEleitores
       });
       
-      // Limpa os campos da tela após salvar
+      // Reinicializa os campos do formulário
       this.nomeCidade = '';
       this.quantidadeEleitores = null;
       
