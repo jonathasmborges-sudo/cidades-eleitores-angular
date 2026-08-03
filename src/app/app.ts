@@ -15,7 +15,7 @@ interface CidadeEleitoral {
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class AppComponent {
+export class App {
   // 2. Variáveis ligadas aos inputs (o que o usuário vai digitar)
   nomeCidade: string = '';
   quantidadeEleitores: number | null = null;
