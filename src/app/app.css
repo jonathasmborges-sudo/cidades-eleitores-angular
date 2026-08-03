@@ -1,0 +1,58 @@
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--texto-escuro);
+}
+
+.card-formulario {
+  background-color: var(--fundo-card);
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--borda);
+  margin-bottom: 24px;
+}
+
+.card-formulario h2 {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--texto-escuro);
+}
+
+.campo input {
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.campo input:focus {
+  border-color: var(--cor-primaria);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--cor-primaria-hover);
+}
