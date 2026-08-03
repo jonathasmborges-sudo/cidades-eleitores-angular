@@ -1,3 +1,30 @@
 <main id="container-principal">
-  <!-- O formulário e a lista vão entrar aqui -->
+  <h1>Cadastro de Cidades e Eleitores</h1>
+
+  <!-- Formulário de Entrada -->
+  <section class="card-formulario">
+    <h2>Cadastrar Nova Cidade</h2>
+    
+    <div class="campo">
+      <label for="nomeCidade">Nome da Cidade</label>
+      <input 
+        type="text" 
+        id="nomeCidade" 
+        [(ngModel)]="nomeCidade" 
+        placeholder="Ex: Aracaju"
+      >
+    </div>
+
+    <div class="campo">
+      <label for="quantidadeEleitores">Número de Eleitores</label>
+      <input 
+        type="number" 
+        id="quantidadeEleitores" 
+        [(ngModel)]="quantidadeEleitores" 
+        placeholder="Ex: 50000"
+      >
+    </div>
+
+    <button (click)="adicionarCidade()">Cadastrar Cidade</button>
+  </section>
 </main>
