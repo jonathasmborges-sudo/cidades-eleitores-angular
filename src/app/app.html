@@ -27,4 +27,29 @@
 
     <button (click)="adicionarCidade()">Cadastrar Cidade</button>
   </section>
+  <!-- Tabela de Listagem -->
+  <section class="card-tabela">
+    <h2>Cidades Cadastradas</h2>
+
+    @if (cidades.length === 0) {
+      <p class="mensagem-vazia">Nenhuma cidade cadastrada ainda.</p>
+    } @else {
+      <table>
+        <thead>
+          <tr>
+            <th>Cidade</th>
+            <th>Nº de Eleitores</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (cidade of cidades; track cidade.nome) {
+            <tr>
+              <td>{{ cidade.nome }}</td>
+              <td>{{ cidade.eleitores }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </section>
 </main>
