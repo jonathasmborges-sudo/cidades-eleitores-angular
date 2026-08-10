@@ -96,3 +96,42 @@ th {
 tr:last-child td {
   border-bottom: none;
 }
+
+/* 1. Alinha os botões lado a lado */
+.acoes-container {
+  display: flex;
+  gap: 8px; /* Espaço exato entre o botão de editar e excluir */
+}
+
+/* 2. Reseta o tamanho exagerado dos botões da tabela */
+.acoes-container button {
+  width: auto;          /* Deixa o botão do tamanho do texto */
+  padding: 6px 14px;    /* Deixa o botão mais delicado/menor */
+  font-size: 0.85rem;   /* Reduz levemente a fonte */
+  cursor: pointer;      /* Mostra a mãozinha ao passar o mouse */
+  border-radius: 6px;   /* Arredonda as pontas */
+  border: none;         /* Remove a borda padrão */
+  font-weight: 600;     /* Texto um pouco mais espesso */
+}
+
+/* 3. Estilo do Botão Editar (Amarelo / Âmbar) */
+.btn-editar {
+  background-color: #f59e0b;
+  color: #1e293b; /* Texto escuro para boa leitura */
+}
+
+/* Efeito ao passar o mouse por cima */
+.btn-editar:hover {
+  background-color: #d97706; /* Fica num tom mais escuro */
+}
+
+/* 4. Estilo do Botão Excluir (Vermelho) */
+.btn-excluir {
+  background-color: #ef4444;
+  color: #ffffff; /* Texto branco */
+}
+
+/* Efeito ao passar o mouse por cima */
+.btn-excluir:hover {
+  background-color: #dc2626; /* Fica num tom mais escuro */
+}

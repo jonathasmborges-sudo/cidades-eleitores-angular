@@ -3,7 +3,7 @@
 
   <!-- Formulário de Entrada -->
   <section class="card-formulario">
-    <h2>Cadastrar Nova Cidade</h2>
+    <h2>{{ indiceEmEdicao !== null ? 'Editar Cidade' : 'Cadastro Nova Cidade' }}</h2>
     
     <div class="campo">
       <label for="nomeCidade">Nome da Cidade</label>
@@ -25,7 +25,9 @@
       >
     </div>
 
-    <button (click)="adicionarCidade()">Cadastrar Cidade</button>
+    <button (click)="adicionarCidade()"> 
+      {{ indiceEmEdicao !== null ? 'Salvar Alteração' : 'Cadastrar Cidade'}}
+    </button>
   </section>
   <!-- Tabela de Listagem -->
   <section class="card-tabela">
@@ -39,13 +41,22 @@
           <tr>
             <th>Cidade</th>
             <th>Nº de Eleitores</th>
+            <th>Ações</th> <!-- 1. Coluna adicionada aqui -->
           </tr>
         </thead>
         <tbody>
-          @for (cidade of cidades; track cidade.nome) {
+          <!-- 2. Pegando o índice (let i = $index) -->
+          @for (cidade of cidades; track $index; let i = $index) {
             <tr>
               <td>{{ cidade.nome }}</td>
               <td>{{ cidade.eleitores }}</td>
+              <!-- 3. Célula com os botões adiciona aqui -->
+               <td>
+                <div class="acoes-container">
+                  <button class="btn-editar" (click)="editarCidade(i)">Editar</button>
+                   <button class="btn-excluir" (click)="excluirCidade(i)">Excluir</button>
+                </div>
+               </td>
             </tr>
           }
         </tbody>
